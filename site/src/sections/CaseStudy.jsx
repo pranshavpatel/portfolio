@@ -16,16 +16,16 @@ export default function CaseStudy({ project: cs, next, onBack, onOpen }) {
           <div key={r.l} data-a="cs" className="case__result"><span className="case__result-v">{r.v}</span><span className="case__result-l">{r.l}</span></div>
         ))}
       </div>
-      <div data-a="cs" className="case__figure">{cs.figure}</div>
+      <div data-a="reveal" className="case__figure">{cs.figure}</div>
       {cs.sections.map(sec => (
-        <div key={sec.h} data-a="cs" className="case__section">
+        <div key={sec.h} data-a="row" className="case__section">
           <h2>{sec.h}</h2>
           <div className="case__section-body">{sec.p.map((para, i) => <p key={i}>{para}</p>)}</div>
         </div>
       ))}
       <a className="case__next" href={'#' + next.slug} onClick={e => { e.preventDefault(); onOpen(next.slug); }}>
         <span className="case__next-label">Next project</span>
-        <span className="case__next-title">{next.title} <em>→</em></span>
+        <span data-a="heading" className="case__next-title">{next.title} <em>→</em></span>
       </a>
     </main>
   );

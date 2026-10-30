@@ -9,8 +9,8 @@ export default function Contact({ profile }) {
     <section id="contact" data-a="contact" className="contact">
       <div className="contact__inner">
         <span className="mono-label">(Contact) — AI · Software · Data Science, from May 2027</span>
-        <h2 className="contact__title">Hiring new grads for <em className="serif-em accent-light">2027?</em></h2>
-        <div className="contact__help">I can help you <Ticker words={HELP} /></div>
+        <h2 data-a="heading" className="contact__title">Hiring new grads for <em className="serif-em accent-light">2027?</em></h2>
+        <div data-a="reveal" className="contact__help">I can help you <Ticker words={HELP} /></div>
         <a data-a="magnet" className="magnet" href={'mailto:' + profile.email}>{profile.email} <span>→</span></a>
         <div className="contact__links">
           <a href={profile.github} target="_blank" rel="noreferrer">GitHub ↗</a>

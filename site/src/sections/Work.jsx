@@ -86,9 +86,9 @@ export default function Work({ projects }) {
   const half = Math.floor(n / 2);
 
   return (
-    <section id="work" ref={sectionRef} className="work">
+    <section id="work" ref={sectionRef} data-a="work" className="work">
       <div className="work__head">
-        <h2 className="work__title">Personal <em className="serif-em accent-light">projects</em></h2>
+        <h2 data-a="heading" className="work__title">Personal <em className="serif-em accent-light">projects</em></h2>
         <div className="work__controls">
           <span className="work__count"><b>{cur.n}</b> / {String(n).padStart(2, '0')}</span>
           <div className="work__arrows">
@@ -98,7 +98,7 @@ export default function Work({ projects }) {
         </div>
       </div>
 
-      <div className="deck" style={{ height: Math.round(cw / 1.6 + 48) }}
+      <div data-a="deck" className="deck" style={{ height: Math.round(cw / 1.6 + 48) }}
         onPointerDown={e => { drag.current.x0 = e.clientX; drag.current.dragged = false; }}
         onPointerUp={e => {
           const d = drag.current; if (d.x0 == null) return;

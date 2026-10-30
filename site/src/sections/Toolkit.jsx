@@ -8,7 +8,7 @@ export default function Toolkit({ skills }) {
       <div className="toolkit__head mono-label"><span>(Toolkit)</span><span>hover a column</span></div>
       <div className="toolkit__grid">
         {skills.map((s, i) => (
-          <div key={s.g} className={'skill' + (active === i ? ' is-active' : '')} onMouseEnter={() => setActive(i)} onClick={() => setActive(i)}>
+          <div key={s.g} data-a="col" className={'skill' + (active === i ? ' is-active' : '')} onMouseEnter={() => setActive(i)} onClick={() => setActive(i)}>
             <div className="skill__top"><span className="skill__n">({String(i + 1).padStart(2, '0')})</span><span className="skill__plus">+</span></div>
             <div className="skill__bottom">
               <span className="skill__name">{s.g}</span>

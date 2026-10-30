@@ -4,7 +4,7 @@ export default function Experience({ experience, onOpenCase }) {
       <span className="mono-label">(Experience)</span>
       <div className="split__body">
         {experience.map(e => (
-          <div key={e.org} data-a="reveal" className="exp-row">
+          <div key={e.org} data-a="row" className="exp-row">
             <div className="exp-row__head">
               <span className="exp-row__org">{e.org}</span>
               <span className="exp-row__role">{e.role}</span>

@@ -17,11 +17,11 @@ function BandGroup({ hidden }) {
 export default function Hero() {
   return (
     <>
-      <section className="hero">
+      <section data-a="hero" className="hero">
         <div data-a="fade" className="hero__meta"><span>CS grad student, NC State</span><span>Raleigh, NC</span></div>
-        <h1 className="hero__title">
-          <span className="hero__mask"><span data-a="line" className="hero__line">Pranshav Patel.</span></span>
-          <span className="hero__mask hero__mask--ticker"><span data-a="line" className="hero__line">I build <Ticker words={BUILDS} /></span></span>
+        <h1 data-a="heroTitle" className="hero__title">
+          <span data-a="heroMask" className="hero__mask"><span data-a="line" className="hero__line">Pranshav Patel.</span></span>
+          <span data-a="heroMask" className="hero__mask hero__mask--ticker"><span data-a="line" className="hero__line">I build <Ticker words={BUILDS} /></span></span>
         </h1>
         <div data-a="fade" className="hero__foot">
           <p style={{ maxWidth: 340 }}>Master's in Computer Science at NC State, graduating May 2027. Previously interned at LexisNexis and Trading Technologies.</p>

@@ -22,7 +22,7 @@ export function Education({ education }) {
       <span className="mono-label">(Education)</span>
       <div className="split__body">
         {education.map(ed => (
-          <div key={ed.school} data-a="reveal" className="edu-row">
+          <div key={ed.school} data-a="row" className="edu-row">
             <span className="edu-row__school">{ed.school}</span>
             <span className="edu-row__degree">{ed.degree}</span>
             <span className="edu-row__meta">{ed.dates} · {ed.gpa}</span>
