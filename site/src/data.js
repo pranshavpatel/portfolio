@@ -4,7 +4,9 @@ export const profile = {
   github: 'https://github.com/pranshavpatel',
   linkedin: 'https://linkedin.com/in/pranshavpatel',
   location: 'Raleigh, NC',
-  resume: 'uploads/resume_pranshavpatel.pdf'
+  // The ?v= part changes with each new résumé, so browsers fetch it again
+  // instead of showing a copy they cached.
+  resume: 'uploads/resume_pranshavpatel.pdf?v=2026-10-31'
 };
 
 // The notebook's first page.
