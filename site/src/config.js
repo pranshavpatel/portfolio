@@ -1,10 +1,11 @@
-// Values the prototype exposed as Tweaks. Change them here.
+// Settings. Change them here.
 export const config = {
-  showPreloader: true,
   smoothScroll: true,
-  // One of: shards, glitter, cosmos, rainbow, stars, bursts, swirl, gold
-  holoPreset: 'shards',
-  holoIntensity: 0.5
+  // Where the reply form posts. FormSubmit relays it to this address by email
+  // (the first message triggers a one-time activation email to confirm).
+  // To switch to Formspree or Web3Forms, change this URL and the payload in
+  // ReplySheet.jsx.
+  contactEndpoint: 'https://formsubmit.co/ajax/pranshavpatel1803@gmail.com'
 };
 
 export const asset = path => import.meta.env.BASE_URL + path;
