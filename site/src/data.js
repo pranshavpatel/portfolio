@@ -22,15 +22,15 @@ export const projects = [
   {
     // github.com/pranshavpatel/policyBot: README "Retrieval quality", "Groundedness guardrail",
     // "Agent engine".
-    slug: 'policybot', n: '01', title: 'PolicyBot', kind: 'Full-stack AI assistant', context: 'Personal project · live on Vercel / Render',
+    slug: 'policybot', n: '01', title: 'PolicyBot', kind: 'Full-stack RAG assistant', context: 'Personal project · live on Vercel / Render',
     github: 'https://github.com/pranshavpatel/policyBot', live: 'https://policy-bot-two.vercel.app',
-    personalNote: 'I built and deployed an HR assistant end to end, with one JWT access and audit layer behind its API, chat agent and Slack bot.',
+    personalNote: 'An HR assistant that answers policy questions with RAG and files leave requests, behind one JWT access and audit layer.',
     decision: 'One question never found its policy: the splitter stripped section headers from chunks. I put them back into the indexed text.',
     metric: '0.958', metricLabel: 'MRR with reranking, 67 labeled questions',
-    chart: { title: 'Retrieval, 67 questions', rows: [{ l: 'Recall@1', v: 92.5, max: 100, show: '92.5%' }, { l: 'MRR', v: 0.958, max: 1, show: '0.958' }] },
-    stack: ['React', 'JavaScript', 'Python', 'FastAPI', 'LangGraph'],
+    chart: { title: 'RAG retrieval, 67 questions', rows: [{ l: 'Recall@1', v: 92.5, max: 100, show: '92.5%' }, { l: 'MRR', v: 0.958, max: 1, show: '0.958' }] },
+    stack: ['RAG', 'BM25', 'Cross-encoder', 'LangGraph', 'FastAPI', 'React'],
     results: [
-      { v: '92.5%', l: 'Recall@1 over 26 policy docs' },
+      { v: '92.5%', l: 'Recall@1, hybrid retrieval + reranking' },
       { v: '90.0%', l: 'answers correct end to end (63 / 70)' },
       { v: '2', l: 'agent engines: ReAct loop, LangGraph' },
       { v: '105', l: 'tests, run in CI' }
